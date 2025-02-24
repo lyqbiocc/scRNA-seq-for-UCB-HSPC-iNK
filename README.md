@@ -6,7 +6,7 @@ Summary:
 Raw data of droplet-based scRNA-seq （10 × Genomics） can be downloaded and processed by CellRanger software package (version 6.0.1), then aggregated by the ‘aggr’ function and subjected to Seurat (version 3.2.3) for further analysis.  
 
 Raw data of scRNA-seq:  
-The scRNA-seq data of UCB-NK cells, ESC-iNK, iPSC-iNK, iNK (UCB HSPC-iNK) and CD19 CAR-iNK (UCB HSPC-CD19 CAR-iNK) cells have been deposited in the GSA public database (HRA001609 published in "Lateral plate mesoderm cell-based organoid system for NK cell regeneration from human pluripotent stem cells "([https://pubmed.ncbi.nlm.nih.gov/36344493/](https://pubmed.ncbi.nlm.nih.gov/36344493/)), HRA007978 unpublished in this work). 
+The scRNA-seq data of UCB-NK, ESC-iNK, iPSC-iNK, iNK (UCB HSPC-iNK) and CD19 CAR-iNK (UCB HSPC-CD19 CAR-iNK) have been deposited in the GSA public database (HRA001609 published in "Lateral plate mesoderm cell-based organoid system for NK cell regeneration from human pluripotent stem cells "([https://pubmed.ncbi.nlm.nih.gov/36344493/](https://pubmed.ncbi.nlm.nih.gov/36344493/)), HRA007978 unpublished in this work). 
 
 # scRNA seq analysis pipeline
 ## Projetion of UCB-NK (Naural UCB NK), iNK (induced NK from human UCB CD34+ HSPC) and CD19 CAR-iNK (CD19 CAR-iNK from human UCB CD34+ HSPC)
