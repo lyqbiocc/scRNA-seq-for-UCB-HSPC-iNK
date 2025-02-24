@@ -1,5 +1,5 @@
 # scRNA-seq-for-UCB-HSPC-iNK
-Title: Efficient generation of CAR NK cells from human umbilical cord blood CD34+ stem and progenitors for democratizing affordable immunotherapy  
+Title: Large-scale generation of iNK and CAR iNK cells from CD34+ hematopoietic stem and progenitor cells for adoptive immunotherapy  
 bioRxiv: [https://www.biorxiv.org/content/10.1101/2025.01.07.631650v1](https://www.biorxiv.org/content/10.1101/2024.07.30.605741v1)  
 
 Summary:  
