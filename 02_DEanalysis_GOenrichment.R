@@ -13,7 +13,7 @@ library(org.Hs.eg.db)
 # do DE analysis between iNK (UCH-HSPC-iNK) and (UCB-NK, ESC-iNK, iPSC-iNK, CD19-CAR-iNK)  
 ## load rds files
 UCB_HSPC_iNK.seu=readRDS("~/Documents/LJH_10X/results/data/UCB_NK_HSPC_iNK_aggr.rds")
-
+Idents(UCB_HSPC_iNK.seu)=UCB_HSPC_iNK.seu$group
 ## UCB-NK vesus iNK (HSPC_iNK)  
 
 UCBNK_iNK=FindMarkers(UCB_HSPC_iNK.seu,ident.1 ="UCB_NK",ident.2 = "HSPC_iNK" ,test.use = "MAST",min.pct = 0.25,logfc.threshold = 0.5,group.by = "group")
@@ -86,16 +86,17 @@ p
 ## ESC_iNK vesus iNK (HSPC_iNK)  
 ### merge data  
 ESC_iNK=readRDS("~/Documents/iNK_comp/ESC_OL.rds")
-ESC_iNK$orig.ident="ESC_iNK"
+ESC_iNK$group="ESC_iNK"
 
 iPS_iNK=readRDS("~/Documents/iNK_comp/iPSC_OL.rds")
-iPS_iNK$orig.ident="iPSC_iNK"
+iPS_iNK$group="iPSC_iNK"
 UCB_HSPC_iNK_ESC.seu=merge(UCB_HSPC_iNK.seu,list(ESC_iNK,iPS_iNK))
 ### scale data to do dimension reduction analysis
 ### scaled data saved in UCB_HSPC_iNK.seu[["RNA"]]@scale.data
 all.genes <- rownames(UCB_HSPC_iNK_ESC.seu)
 UCB_HSPC_iNK_ESC.seu <- ScaleData(UCB_HSPC_iNK_ESC.seu, features = all.genes)
 saveRDS(UCB_HSPC_iNK_ESC.seu,file = "~/Documents/LJH_10X/results/data/UCB_HSPC_iNK_ESCiPSC.rds")
+Idents(UCB_HSPC_iNK_ESC.seu)=UCB_HSPC_iNK_ESC.seu$group
 ### DE analysis  
 ESCiNK_HSPCiNK=FindMarkers(UCB_HSPC_iNK_ESC.seu,ident.1 ="ESC_iNK",ident.2 = "HSPC_iNK" ,test.use = "MAST",min.pct = 0.25,logfc.threshold = 0.5,group.by = "group")
 dim(ESCiNK_HSPCiNK)
