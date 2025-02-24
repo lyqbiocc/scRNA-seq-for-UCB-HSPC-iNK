@@ -94,9 +94,9 @@ saveRDS(UCB_HSPC_iNK.seu,file = "~/Documents/LJH_10X/results/data/UCB_NK_HSPC_iN
 UCB_HSPC_iNK.seu=readRDS("~/Documents/LJH_10X/results/data/UCB_NK_HSPC_iNK_aggr.rds")
 
 ### run SCTransform on each object separately
-UCB_HSPC_iNK=SCTransform(subset(UCB_HSPC_iNK.seu,subset=orig.ident=="iNK"), verbose = FALSE)
-UCB_aNK=SCTransform(subset(UCB_HSPC_iNK.seu,subset=orig.ident=="UCB-NK"), verbose = FALSE)
-CAR19_HSPC_iNK=SCTransform(subset(UCB_HSPC_iNK.seu,subset=orig.ident=="CD19-CAR-iNK"), verbose = FALSE)
+UCB_HSPC_iNK=SCTransform(subset(UCB_HSPC_iNK.seu,subset=orig.ident=="HSPC_iNK"), verbose = FALSE)
+UCB_aNK=SCTransform(subset(UCB_HSPC_iNK.seu,subset=orig.ident=="UCB_NK"), verbose = FALSE)
+CAR19_HSPC_iNK=SCTransform(subset(UCB_HSPC_iNK.seu,subset=orig.ident=="HSPC_CAR19_iNK"), verbose = FALSE)
 
 ### set the maximum allowed size of seurat object list
 options(future.globals.maxSize = 5000 * 1024^2)
@@ -116,12 +116,12 @@ pb.integrated <- RunPCA(pb.integrated, verbose = FALSE)
 ElbowPlot(pb.integrated,ndims = 30)
 
 pb.integrated <- RunUMAP(pb.integrated, dims = 1:20,n.neighbors = 30)
-plots <- DimPlot(pb.integrated, split.by = c("orig.ident"),label = T)
+plots <- DimPlot(pb.integrated, split.by = c("group"),label = T)
 plots & theme(legend.position = "top") & guides(color = guide_legend(nrow = 3, byrow = TRUE, 
                                                                      override.aes = list(size = 3)))
 
 ### UMAP plot  
-pb.integrated$group=factor(pb.integrated$orig.ident,levels = c("UCB-NK","iNK","CD19-CAR-iNK"))
+pb.integrated$group=factor(pb.integrated$orig.ident,levels = c("UCB_NK","HSPC_iNK","HSPC_CAR19_iNK"))
 
 p1 <- DimPlot(pb.integrated, reduction = "umap", label = F,group.by = "group",pt.size = 0.0001)+labs(title = "")&theme_bw() &
   theme(
@@ -140,5 +140,5 @@ p1 <- DimPlot(pb.integrated, reduction = "umap", label = F,group.by = "group",pt
 #ggsave(p1, filename = "./umap_projection_0706.pdf",width = 13,height = 3)
 
 ## save data
-saveRDS(pb.integrated,file = "~/Documents/LJH_10X/CAR19_HSPC_iNK/UCB_aNK_HSPC_CAR19_iNK.rds")
+#saveRDS(pb.integrated,file = "~/Documents/LJH_10X/CAR19_HSPC_iNK/UCB_aNK_HSPC_CAR19_iNK.rds")
 
