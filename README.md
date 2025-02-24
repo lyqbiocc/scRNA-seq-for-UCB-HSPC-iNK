@@ -9,7 +9,7 @@ Raw data of scRNA-seq:
 The scRNA-seq data of UCB-NK, ESC-iNK, iPSC-iNK, iNK (UCB HSPC-iNK) and CD19 CAR-iNK (UCB HSPC-CD19 CAR-iNK) have been deposited in the GSA public database (HRA001609 published in "Lateral plate mesoderm cell-based organoid system for NK cell regeneration from human pluripotent stem cells "([https://pubmed.ncbi.nlm.nih.gov/36344493/](https://pubmed.ncbi.nlm.nih.gov/36344493/)), HRA007978 unpublished in this work). 
 
 # scRNA seq analysis pipeline
-## Projetion of UCB-NK (Naural UCB NK), iNK (induced NK from human UCB CD34+ HSPC) and CD19 CAR-iNK (CD19 CAR-iNK from human UCB CD34+ HSPC)
+## Projection of UCB-NK (Naural UCB NK), iNK (induced NK from human UCB CD34+ HSPC) and CD19 CAR-iNK (CD19 CAR-iNK from human UCB CD34+ HSPC)
     01_projection_UCBNK_and_iNK.R
 
 ## Identification of DEGS and GO terms enriched between (ESC-iNK vs iNK, iPSC-iNK VS iNK, UCB-NK VS iNK, CD19 CAR-iNK VS iNK)
@@ -18,5 +18,5 @@ The scRNA-seq data of UCB-NK, ESC-iNK, iPSC-iNK, iNK (UCB HSPC-iNK) and CD19 CAR
 ## Visulization of gene expression
     03_genes_expression.R
     
-## Projetion of UCB-NK (Naural UCB NK), ESC-iNK (hESC derived iNK), iPSC-iNK (iPSC derived iNK), iNK and CD19 CAR-iNK
+## Projection of UCB-NK, ESC-iNK (hESC derived iNK), iPSC-iNK (iPSC derived iNK), iNK and CD19 CAR-iNK
     04_projection_UCBNK_and_iNK_ESCiPS_iNK.R
