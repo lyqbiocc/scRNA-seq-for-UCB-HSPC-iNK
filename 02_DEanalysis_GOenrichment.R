@@ -90,7 +90,7 @@ ESC_iNK$orig.ident="ESC_iNK"
 
 iPS_iNK=readRDS("~/Documents/iNK_comp/iPSC_OL.rds")
 iPS_iNK$orig.ident="iPSC_iNK"
-UCB_HSPC_iNK_ESC.seu=merge(UCB_HSPC_iNK.seu,ESC_iNK,iPS_iNK)
+UCB_HSPC_iNK_ESC.seu=merge(UCB_HSPC_iNK.seu,list(ESC_iNK,iPS_iNK))
 ### scale data to do dimension reduction analysis
 ### scaled data saved in UCB_HSPC_iNK.seu[["RNA"]]@scale.data
 all.genes <- rownames(UCB_HSPC_iNK_ESC.seu)
