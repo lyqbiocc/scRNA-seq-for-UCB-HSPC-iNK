@@ -18,7 +18,7 @@ UCB_HSPC_iNK_ESC.seu=subset(UCB_HSPC_iNK.seu,subset=group!="CAR19_HSPC_iNK")
 ## transform merge  
 ### FindIntegrationAnchors（ no SCT normalized）
 
-pb_anchor <- FindIntegrationAnchors(object.list = list(subset(UCB_HSPC_iNK_ESC.seu,ident="UCB_NK"),subset(UCB_HSPC_iNK_ESC.seu,ident=c("HSPC_iNK","ESC_iNK","iPSC_iNK"))), dims = 1:30,k.anchor = 5,k.filter = 150)#k.filter原先可以跑，重新跑就不行了
+pb_anchor <- FindIntegrationAnchors(object.list = list(subset(UCB_HSPC_iNK_ESC.seu,ident="UCB_NK"),subset(UCB_HSPC_iNK_ESC.seu,ident=c("HSPC_iNK","ESC_iNK","iPSC_iNK"))), dims = 1:30,k.anchor = 5,k.filter = 150)
 #pb_integ <- FindIntegrationAnchors(object.list = list(ILC_induced,ILC_ref.obj2), dims = 1:30,k.anchor = 5,k.filter = 180)
 pb_integ <- IntegrateData(anchorset = pb_anchor, dims = 1:30)
 DefaultAssay(pb_integ) <- "integrated"
