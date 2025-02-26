@@ -13,7 +13,7 @@ library(org.Hs.eg.db)
 #projection of UCB-NK, ESC_iNK, iPSC_iNK, iNK(HSPC_iNK)  
 ## input data 
 UCB_HSPC_iNK_ESC.seu=readRDS("~/Documents/LJH_10X/results/data/UCB_HSPC_iNK_ESCiPSC.rds")
-UCB_HSPC_iNK_ESC.seu=subset(UCB_HSPC_iNK.seu,subset=group!="CAR19_HSPC_iNK")
+UCB_HSPC_iNK_ESC.seu=subset(UCB_HSPC_iNK_ESC.seu,subset=group!="CAR19_HSPC_iNK")
 
 ## transform merge  
 ### FindIntegrationAnchors（ no SCT normalized）
