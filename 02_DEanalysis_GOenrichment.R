@@ -186,10 +186,10 @@ p2=enrichplot::dotplot(UCBNK_iNK_go[[2]],title =names(UCBNK_iNK_go)[2],showCateg
     plot.title = element_text(hjust = 0.5,size=20),legend.position = "bottom")+ guides(size = guide_legend(nrow = 3, byrow = TRUE,order = 1,label.theme = element_text(size=8)),color=guide_colorbar(direction="vertical",barwidth = 0.5,barheight = 3,label.theme = element_text(size=8,angle = 0),order = 2))
 
 p=plot_grid(p1,p2,ncol = 2,rel_widths = c(1,1))+theme(
-  plot.margin = margin(t = 10,  # 顶部边缘距离
-                       r = 20,  # 右边边缘距离
-                       b = 10,  # 底部边缘距离
-                       l = 20)) # 左边边缘距离
+  plot.margin = margin(t = 10,  
+                       r = 20, 
+                       b = 10,  
+                       l = 20)) 
 
 p
 #ggsave(p,filename ="~/Documents/LJH_10X/results/plots/Goterms_UCBNK_HSPCiNK.pdf",width = 15,height = 10)
@@ -211,10 +211,10 @@ p2=enrichplot::dotplot(UCBNK_CAR19_go[[2]],title =names(UCBNK_CAR19_go)[2],showC
     plot.title = element_text(hjust = 0.5,size=20),legend.position = "bottom")+ guides(size = guide_legend(nrow = 3, byrow = TRUE,order = 1,label.theme = element_text(size=8)),color=guide_colorbar(direction="vertical",barwidth = 0.5,barheight = 3,label.theme = element_text(size=8,angle = 0),order = 2))
 
 p=plot_grid(p1,p2,ncol = 2,rel_widths = c(1,1))+theme(
-  plot.margin = margin(t = 10,  # 顶部边缘距离
-                       r = 20,  # 右边边缘距离
-                       b = 10,  # 底部边缘距离
-                       l = 20)) # 左边边缘距离
+  plot.margin = margin(t = 10, 
+                       r = 20, 
+                       b = 10, 
+                       l = 20)) 
 
 p
 #ggsave(p,filename ="~/Documents/LJH_10X/results/plots/Goterms_UCBNK_CAR19iNK.pdf",width = 15,height = 10)
@@ -237,10 +237,10 @@ p2=enrichplot::dotplot(CAR19iNK_iNK_go[[2]],title =names(CAR19iNK_iNK_go)[2],sho
     plot.title = element_text(hjust = 0.5,size=20),legend.position = "bottom")+ guides(size = guide_legend(nrow = 3, byrow = TRUE,order = 1,label.theme = element_text(size=8)),color=guide_colorbar(direction="vertical",barwidth = 0.5,barheight = 3,label.theme = element_text(size=8,angle = 0),order = 2))
 
 p=plot_grid(p1,p2,ncol = 2,rel_widths = c(1,1))+theme(
-  plot.margin = margin(t = 10,  # 顶部边缘距离
-                       r = 20,  # 右边边缘距离
-                       b = 10,  # 底部边缘距离
-                       l = 20)) # 左边边缘距离
+  plot.margin = margin(t = 10, 
+                       r = 20,  
+                       b = 10,  
+                       l = 20)) 
 
 p
 #ggsave(p,filename ="~/Documents/LJH_10X/results/plots/Goterms_CAR19iNK_iNK.pdf",width = 15,height = 10)
@@ -262,10 +262,10 @@ p2=enrichplot::dotplot(ESCiNK_HSPCiNK_go[[2]],title =names(ESCiNK_HSPCiNK_go)[2]
     plot.title = element_text(hjust = 0.5,size=20),legend.position = "bottom")+ guides(size = guide_legend(nrow = 3, byrow = TRUE,order = 1,label.theme = element_text(size=8)),color=guide_colorbar(direction="vertical",barwidth = 0.5,barheight = 3,label.theme = element_text(size=8,angle = 0),order = 2))
 
 p=plot_grid(p1,p2,ncol = 2,rel_widths = c(1,1))+theme(
-  plot.margin = margin(t = 10,  # 顶部边缘距离
-                       r = 20,  # 右边边缘距离
-                       b = 10,  # 底部边缘距离
-                       l = 20)) # 左边边缘距离
+  plot.margin = margin(t = 10,  
+                       r = 20,  
+                       b = 10, 
+                       l = 20)) 
 
 p
 #ggsave(p,filename ="~/Documents/LJH_10X/results/plots/Goterms_ESCiNK_HSPCiNK.pdf",width = 15,height = 12)
@@ -287,10 +287,10 @@ p2=enrichplot::dotplot(iPSiNK_HSPCiNK_go[[2]],title =names(iPSiNK_HSPCiNK_go)[2]
     plot.title = element_text(hjust = 0.5,size=20),legend.position = "bottom")+ guides(size = guide_legend(nrow = 3, byrow = TRUE,order = 1,label.theme = element_text(size=8)),color=guide_colorbar(direction="vertical",barwidth = 0.5,barheight = 3,label.theme = element_text(size=8,angle = 0),order = 2))
 
 p=plot_grid(p1,p2,ncol = 2,rel_widths = c(1,1))+theme(
-  plot.margin = margin(t = 10,  # 顶部边缘距离
-                       r = 20,  # 右边边缘距离
-                       b = 10,  # 底部边缘距离
-                       l = 20)) # 左边边缘距离
+  plot.margin = margin(t = 10, 
+                       r = 20, 
+                       b = 10, 
+                       l = 20))
 
 p
 ggsave(p,filename ="~/Documents/LJH_10X/results/plots/Goterms_iPSiNK_HSPCiNK.pdf",width = 15,height = 12)
